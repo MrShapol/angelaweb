@@ -11,6 +11,8 @@ from flask_gravatar import Gravatar
 from functools import wraps
 from forms import RegisterForm, CreatePostForm, LoginForm, CommentForm
 import os
+import psycopg2
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 ckeditor = CKEditor(app)
