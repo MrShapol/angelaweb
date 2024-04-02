@@ -66,7 +66,6 @@ class Comment(db.Model):
     comment_post = relationship('BlogPost', back_populates='comments')
 
 
-db.create_all()
 
 
 
