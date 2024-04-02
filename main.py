@@ -17,7 +17,9 @@ ckeditor = CKEditor(app)
 Bootstrap(app)
 
 ##CONNECT TO DB
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL','sqlite:///blog.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+#'sqlite:///blog.db'
+#postgres://angelaweb_user:taei13IlfdsfPSDvMsud9kuRUm4ezhlt@dpg-co61j44f7o1s73a9rl00-a.oregon-postgres.render.com/angelaweb
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 gravatar = Gravatar(app,
